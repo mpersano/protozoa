@@ -1,0 +1,14 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  3.5.10.1242
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl checker
+Ka 0 0 0
+Kd 0.498039 0.498039 0.498039
+Ks 0 0 0
+illum 2
+Ns 115.36
+map_Kd ship01_v001_uvmap.png

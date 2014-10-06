@@ -1,0 +1,18 @@
+struct out_data {
+	float4 color : COLOR;
+};
+
+struct in_data {
+	float4 color : COLOR;
+};
+
+uniform float4 mix_color;
+uniform float mix_factor;
+
+out_data
+frag_shader_main(in_data IN)
+{
+	out_data OUT;
+	OUT.color = IN.color;
+	return OUT;
+}

@@ -1,0 +1,307 @@
+###-- 
+#
+#   W A V E   1
+#
+wave {
+	label "1"
+
+	max-foes 12
+
+	arena {
+		verts [
+			5.631249 1.650000,
+			-0.043744 6.700000,
+			-2.618750 5.900001,
+			-6.243752 0.649999,
+			-5.368751 -4.225000,
+			0.131249 -6.099998,
+			3.006249 -4.100001,
+			5.506249 -0.475000,
+		]
+		center 2.712768 6.103725
+	}
+
+	events [
+		wall { foe-type 5 time 20 foe-count 1 powerup-type 0 },
+		wall { foe-type 0 time 20 foe-count 12 wall 0 },
+		wall { foe-type 2 time 50 foe-count 2 wall 0 },
+		wall { foe-type 7 time 180 foe-count 3 wall 3 },
+		wall { foe-type 7 time 190 foe-count 2 wall 4 },
+		wall { foe-type 5 time 190 foe-count 1 wall 4 powerup-type 7 },
+		wall { foe-type 0 time 290 foe-count 40 wall 4 },
+	]
+}
+
+wave {
+	label "2"
+
+	max-foes 12
+
+	arena {
+		verts [
+			4.333337 5.416667,
+			0.208327 6.916663,
+			-5.041662 5.041668,
+			-6.041665 0.416670,
+			-5.666670 -1.708329,
+			-1.416662 -4.958331,
+			1.458339 -6.583330,
+			5.583329 -3.708340,
+			6.583328 -0.833338,
+		]
+		center -17.021273 21.808510
+	}
+
+	events [
+		# 1. create a false sense of security
+		wall { foe-type 5 time 10 foe-count 1 wall 0 powerup-type 6 },
+		wall { foe-type 2 time 80 foe-count 2 wall 4 },
+		wall { foe-type 2 time 80 foe-count 2 wall 5 },
+		wall { foe-type 0 time 80 foe-count 5 wall 4 },
+		wall { foe-type 1 time 80 foe-count 5 wall 4 },
+		wall { foe-type 0 time 80 foe-count 5 wall 5 powerup-type 0 },
+
+		# 2. fast pussycat kill kill!
+		wall { foe-type 7 time 280 foe-count 3 wall 3 },
+		wall { foe-type 7 time 280 foe-count 4 wall 4 },
+		wall { foe-type 7 time 320 foe-count 3 wall 0 },
+		wall { foe-type 7 time 320 foe-count 4 wall 1 },
+
+		wall { foe-type 3 time 400 foe-count 2 wall 5 },
+		wall { foe-type 3 time 400 foe-count 2 wall 0 },
+		wall { foe-type 0 time 400 foe-count 4 wall 5 },
+		wall { foe-type 0 time 400 foe-count 4 wall 0 },
+	]
+}
+
+wave {
+	label "3"
+
+	max-foes 6
+
+	arena {
+		verts [
+			4.618519 -2.465663,
+			5.993538 1.034338,
+			3.243514 6.284338,
+			-2.256485 6.659338,
+			-7.006486 2.784337,
+			-6.006470 -0.340666,
+			-3.006489 -3.340664,
+			0.801841 -5.399698,
+			3.618517 -5.215659,
+		]
+		center 6.456041 42.301029
+	}
+
+	events [
+		wall { foe-type 5 time 40 foe-count 6 wall 0 powerup-type 0 },
+		wall { foe-type 1 time 40 foe-count 6 wall 0 powerup-type 2 },
+		wall { foe-type 0 time 40 foe-count 6 wall 0 powerup-type 1 },
+		wall { foe-type 1 time 40 foe-count 6 wall 0 },
+		wall { foe-type 2 time 40 foe-count 2 wall 0 powerup-type 3 },
+		wall { foe-type 0 time 180 foe-count 4 wall 2 }, 
+		wall { foe-type 1 time 180 foe-count 4 wall 2 }, 
+		wall { foe-type 0 time 180 foe-count 4 wall 3 }, 
+		wall { foe-type 1 time 180 foe-count 4 wall 3 }, 
+		wall { foe-type 2 time 180 foe-count 1 wall 3 powerup-type 1 },
+
+		wall { foe-type 3 time 480 foe-count 6 wall 2 }, 
+		wall { foe-type 3 time 480 foe-count 6 wall 3 }, 
+		wall { foe-type 3 time 500 foe-count 2 wall 0 },
+	]
+}
+
+
+
+wave {
+	label "3"
+
+	max-foes 6
+
+	arena {
+		verts [
+			4.492188 -4.501465,
+			6.054686 -0.599120,
+			4.679685 2.900879,
+			0.179686 4.900878,
+			-3.007806 4.623535,
+			-6.757808 1.748535,
+			-4.445316 -2.974121,
+			-1.195315 -6.099121,
+		]
+		center -4.790348 68.633629
+	}
+
+	events [
+		wall { foe-type 5 time 10 foe-count 3 wall 0 },
+		wall { foe-type 1 time 10 foe-count 3 wall 0 },
+		wall { foe-type 1 time 30 foe-count 3 wall 2 powerup-type 0 }, 
+		wall { foe-type 5 time 30 foe-count 2 wall 2 }, 
+
+		wall { foe-type 1 time 30 foe-count 5 wall 3 }, 
+		wall { foe-type 1 time 30 foe-count 5 wall 2 }, 
+		wall { foe-type 1 time 30 foe-count 5 wall 3 powerup-type 3 }, 
+		wall { foe-type 1 time 30 foe-count 5 wall 2 }, 
+		wall { foe-type 1 time 30 foe-count 5 wall 3 }, 
+		wall { foe-type 0 time 30 foe-count 10 wall 2 }, 
+		wall { foe-type 0 time 30 foe-count 10 wall 3 }, 
+		wall { foe-type 2 time 30 foe-count 2 wall 3 }, 
+		wall { foe-type 3 time 210 foe-count 5 wall 2 powerup-type 5 },
+		wall { foe-type 3 time 210 foe-count 5 wall 3 powerup-type 7 }, 
+		wall { foe-type 3 time 290 foe-count 5 wall 0 },
+
+		wall { foe-type 7 time 410 foe-count 8 wall 3 }, 
+		wall { foe-type 7 time 490 foe-count 8 wall 0 },
+	]
+}
+
+
+wave {
+	label "2"
+
+	max-foes 6
+
+	arena {
+		verts [
+			4.583547 2.900346,
+			-0.574620 6.476883,
+			-4.666452 5.025352,
+			-6.378183 1.369738,
+			-3.916452 -5.099654,
+			1.246803 -5.880254,
+			4.371812 -3.817759,
+			5.333546 -0.974653,
+		]
+		center -25.797869 50.332447
+	}
+
+	events [
+		wall { foe-type 0 time 20 foe-count 8 wall 3 }, 
+		wall { foe-type 5 time 20 foe-count 8 wall 3 powerup-type 6 },
+		wall { foe-type 7 time 20 foe-count 2 wall 3 },
+		wall { foe-type 7 time 20 foe-count 1 wall 4 },
+
+		circle { foe-type 0 time 120 foe-count 8 radius 4.000000 center 0.500000 0.200000 }, 
+		circle { foe-type 1 time 120 foe-count 8 radius 4.000000 center 0.500000 0.200000 },
+		circle { foe-type 2 time 120 foe-count 2 radius 4.000000 center 0.500000 0.200000 powerup-type 0 },
+		wall { foe-type 6 time 210 foe-count 8 wall 0 }, 
+		wall { foe-type 6 time 210 foe-count 8 wall 6 },
+
+		wall { foe-type 7 time 350 foe-count 10 wall 0 }, 
+		wall { foe-type 7 time 350 foe-count 10 wall 6 },
+	]
+}
+
+wave {
+	label "easy"
+
+	max-foes 6
+
+	arena {
+		verts [
+			6.368268 0.053365,
+			3.618266 5.178364,
+			-2.006712 5.928361,
+			-6.735213 1.366046,
+			-6.256714 -2.821636,
+			0.118287 -5.446637,
+			4.893817 -4.257862,
+		]
+		center -26.348835 81.351517
+	}
+
+	events [
+		wall { foe-type 5 time 10 foe-count 1 wall 0 powerup-type 0 }, 
+		wall { foe-type 0 time 60 foe-count 6 wall 3 }, 
+		wall { foe-type 7 time 60 foe-count 2 wall 3 }, 
+		wall { foe-type 5 time 60 foe-count 6 wall 3 }, 
+		wall { foe-type 1 time 60 foe-count 6 wall 3 powerup-type 3 },
+		wall { foe-type 2 time 60 foe-count 1 wall 3 }, 
+		wall { foe-type 0 time 140 foe-count 3 wall 0 }, 
+		wall { foe-type 7 time 140 foe-count 2 wall 0 }, 
+		wall { foe-type 1 time 140 foe-count 3 wall 0 }, 
+		wall { foe-type 0 time 140 foe-count 3 wall 6 }, 
+		wall { foe-type 1 time 140 foe-count 3 wall 6 powerup-type 7 }, 
+
+		wall { foe-type 3 time 240 foe-count 3 wall 6 }, 
+		wall { foe-type 3 time 240 foe-count 3 wall 6 }, 
+
+		wall { foe-type 7 time 540 foe-count 9 wall 6 }, 
+		wall { foe-type 7 time 540 foe-count 9 wall 6 }, 
+		wall { foe-type 7 time 540 foe-count 9 wall 3 }, 
+		wall { foe-type 7 time 540 foe-count 9 wall 3 }, 
+	]
+}
+
+
+
+wave {
+	label "Almost there!"
+
+	max-foes 12
+
+	arena {
+		verts [
+			6.406090 2.609269,
+			2.031088 5.109269,
+			-1.753990 5.065053,
+			-6.182562 3.279333,
+			-5.343895 -0.390731,
+			-3.718911 -5.390731,
+			2.156092 -7.015731,
+			6.406088 -3.265731,
+		]
+		center -2.161127 97.806198
+	}
+
+	events [
+		wall { foe-type 5 time 1 foe-count 1 wall 0 powerup-type 7 },
+
+		wall { foe-type 7 time 50 foe-count 2 wall 1 powerup-type 7 },
+		wall { foe-type 7 time 80 foe-count 7 wall 2 },
+		wall { foe-type 5 time 100 foe-count 18 wall 0 },
+		wall { foe-type 7 time 150 foe-count 12 wall 0 },
+
+		# wall { foe-type 4 time 30 foe-count 3 wall 2 },
+
+		wall { foe-type 7 time 280 foe-count 3 wall 2 },
+		wall { foe-type 5 time 280 foe-count 12 wall 2 powerup-type 7 },
+
+		wall { foe-type 7 time 350 foe-count 5 wall 2 powerup-type 7 },
+
+		wall { foe-type 5 time 480 foe-count 20 wall 4 },
+	]
+}
+
+wave {
+	label "Last One!"
+
+	max-foes 1
+
+	arena {
+		verts [
+			5.734375 -3.109375,
+			4.484372 1.515629,
+			0.984377 5.640625,
+			-1.640621 6.765625,
+			-4.390625 2.765625,
+			-6.515626 -1.609374,
+			-2.515626 -5.984377,
+			3.859374 -5.984377,
+		]
+		center 19.980061 23.969410
+	}
+
+	events [
+		wall {
+			foe-type 0
+			time 1
+			foe-count 1
+			wall 0
+			powerup-type 7
+		},
+
+	]
+}
+

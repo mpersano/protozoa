@@ -1,0 +1,279 @@
+def ui-settings group {
+	general-settings {
+		god-mode off
+		background on
+		random-foes on
+		sound on
+		start-level 0
+		start-wave 0
+		all-powerups off
+		water-color 100 100 100 255
+		serialization on
+	}
+
+	ship-settings {
+		speed .18
+
+		mesh {
+			source "ship002.obj"
+			transform -4 0 0 0
+			          0 -4 0 0 
+				  0 0 4 0
+		}
+
+		def shield sprite {
+			source "shield.png"
+			width 1.1
+			height 1.1
+		}
+	}
+
+	def powerup-settings group {
+		#
+		#   E X T R A   C A N N O N
+		#
+		def extra-cannon powerup {
+			ttl 300
+			sprite {
+				source "pu-extra-cannon.png"
+				width .8
+				height .8
+				color 255 255 255 255
+			}
+			text {
+				string "EXTRA CANNON"
+				scale 1.2
+				color 255 255 255 255
+				ttl 60
+			}
+		}
+
+		#
+		#   B O U N C Y   S H O T S
+		#
+		def bouncy-shots powerup {
+			ttl 300
+			sprite {
+				source "pu-bouncy-shots.png"
+				width .8
+				height .8
+				color 255 255 255 255
+			}
+			text {
+				string "BOUNCY SHOTS"
+				scale 1.2
+				color 255 255 255 255
+				ttl 30
+			}
+		}
+
+		#
+		#   S I D E   C A N N O N
+		#
+		def side-cannon powerup {
+			ttl 300
+			sprite {
+				source "pu-side-cannon.png"
+				width .8
+				height .8
+				color 255 255 255 255
+			}
+			text {
+				string "SIDE CANNON"
+				scale 1.2
+				color 255 255 255 255
+				ttl 30
+			}
+		}
+
+		#
+		#   P O W E R   S H O T S
+		#
+		def power-shots powerup {
+			ttl 300
+			sprite {
+				source "pu-power-shots.png"
+				width .8
+				height .8
+				color 255 255 255 255
+			}
+			text {
+				string "POWER SHOTS"
+				scale 1.2
+				color 255 255 255 255
+				ttl 30
+			}
+		}
+
+		#
+		#   S H I E L D
+		#
+		def shield powerup {
+			ttl 300
+			sprite {
+				source "pu-shield.png"
+				width .8
+				height .8
+				color 255 255 255 255
+			}
+			text {
+				string "SHIELD"
+				scale 1.2
+				color 255 255 255 255
+				ttl 30
+			}
+		}
+
+		#
+		#   E X T R A   S H I P
+		#
+		def extra-ship powerup {
+			ttl 300
+			sprite {
+				source "pu-extra-ship.png"
+				width .8
+				height .8
+				color 255 255 255 255
+			}
+			text {
+				string "EXTRA SHIP"
+				scale 1.2
+				color 255 204 0 255
+				ttl 30
+			}
+		}
+
+		#
+		#   H O M I N G   M I S S I L E S
+		#
+		def homing-missile powerup {
+			ttl 300
+			sprite {
+				source "pu-homing-missile.png"
+				width .8
+				height .8
+				color 255 255 255 255
+			}
+			text {
+				string "HOMING MISSILES"
+				scale 1.2
+				color 255 204 255 255
+				ttl 30
+			}
+		}
+
+		#
+		#   L A S E R
+		#
+		def laser powerup {
+			ttl 300
+			sprite {
+				source "pu-laser.png"
+				width .8
+				height .8
+				color 255 255 255 255
+			}
+			text {
+				string "LASER"
+				scale 1.2
+				color 128 255 128 255
+				ttl 30
+			}
+		}
+	}
+
+	def missile-settings group {
+		#
+		#   S T A N D A R D   M I S S I L E
+		#
+		def standard missile {
+			speed .3
+			refire-interval 5
+			sprite {
+				source "missile.png"
+				width .3
+				height .3
+				color 255 255 255 255
+			}
+		}
+
+		#
+		#   P O W E R   M I S S I L E
+		#
+		def power missile {
+			speed .4
+			refire-interval 5
+			sprite {
+				source "purple-missile.png"
+				width .6
+				height .6
+				color 255 255 255 255
+			}
+		}
+
+		#
+		#   H O M I N G   M I S S I L E
+		#
+		def homing missile {
+			speed .25
+			refire-interval 5
+			sprite {
+				source "homing-trail.png"
+				width 1.2
+				height 1.2		# ignored for homing
+				color 255 255 255 255
+			}
+		}
+	}
+
+	def foe-settings group {
+		def sitting-duck mesh {
+			source "duck.obj"
+			transform 9 0 0 0
+			          0 9 0 0 
+				  0 0 9 0
+		}
+		def jarhead mesh {
+			source "jarhead.obj"
+			transform 1 0 0 0
+			          0 1 0 0 
+				  0 0 1 0
+		}
+		def brute mesh {
+			source "brute.obj"
+			transform 1 0 0 0
+			          0 1 0 0 
+				  0 0 1 0
+		}
+		def evolved-duck mesh {
+			source "evolved-duck.obj"
+			transform 6 0 0 0
+			          0 6 0 0 
+				  0 0 6 0
+		}
+		def ninja mesh {
+			source "ninja.obj"
+			transform 6 0 0 0
+			          0 6 0 0 
+				  0 0 6 0
+		}
+		def fast-duck mesh {
+			source "fast-duck.obj"
+			transform 1 0 0 0
+			          0 1 0 0 
+				  0 0 1 0
+		}
+		def fast-jarhead mesh {
+			source "evolved-duck.obj"
+			transform 5.5 0 0 0
+			          0 5.5 0 0 
+				  0 0 5.5 0
+		}
+		def bomber mesh {
+			source "bomber.obj"
+			transform 6 0 0 0
+			          0 6 0 0 
+				  0 0 6 0
+		}
+	}
+}

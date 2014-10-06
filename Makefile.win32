@@ -1,0 +1,61 @@
+CC = gcc
+LD = gcc
+OBJS = $(CFILES:.c=.o)
+LIBS = -mwindows -lmingw32 -lmingwex -lglew32 -lopengl32 -lglu32 `sdl-config --libs` -lpng -lz -lcg -lcgGL -lOpenAL32 -lvorbisfile -lvorbis -logg -L/usr/local/cross-tools/i386-mingw32/bin/
+CFLAGS = `sdl-config --cflags` -g -O2 -DFRAMESKIP -DUSE_CG -DUSE_OPENAL
+CFILES = main.c panic.c in_game.c ship.c missile.c foe.c arena.c mesh.c particle.c image.c gl_util.c dict.c hash_table.c image.c matrix.c
+
+CFILES = main.c \
+	panic.c \
+	in_game.c \
+	ship.c \
+	missile.c \
+	powerup.c \
+	foe.c \
+	arena.c \
+	mesh.c \
+	particle.c \
+	hash_table.c \
+	dict.c \
+	image.c \
+	matrix.c \
+	gl_util.c \
+	list.c \
+	font.c \
+	font_render.c \
+	yyerror.c \
+	fontdef_y_tab.c \
+	fontdef_lex_yy.c \
+	water.c \
+	background.c \
+	dna.c \
+	menu.c \
+	main_menu.c \
+	mt19937int.c \
+	in_game_menu.c \
+	explosion.c \
+	settings_menu.c \
+	settings_y_tab.c \
+	settings_lex_yy.c \
+	in_game_text.c \
+	levels_y_tab.o \
+	levels_lex_yy.o \
+	audio.o \
+	laser.o \
+	highscores.o \
+	highscore_input.o \
+	settings_file.o \
+	bomb.o \
+	bubbles.o \
+	playback.o \
+	credits.o \
+	cursor.o
+
+.c.o:
+	$(CC) $(CFLAGS) -c $<
+
+game.exe: $(OBJS)
+	$(LD) $(LDFLAGS) $(OBJS) -o $@ $(LIBS)
+
+clean:
+	rm -f *.o

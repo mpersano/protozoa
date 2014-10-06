@@ -1,0 +1,43 @@
+struct out_data {
+	float4 position : POSITION;
+	float4 color : COLOR;
+	float4 decal_coord : TEXCOORD0;
+};
+
+struct in_data {
+	float4 position : POSITION;
+	float4 normal : NORMAL;
+	float4 decal_coord : TEXCOORD0;
+};
+
+uniform float4 mix_color;
+uniform float mix_factor;
+
+uniform float3 ambient_color;
+uniform float3 diffuse_color;
+uniform float3 specular_color;
+uniform float shininess;
+
+uniform float4x4 model_view_proj;
+uniform float4x4 model_view_it;
+
+out_data
+tex_vert_shader_main(in_data IN)
+{
+	out_data OUT;
+
+	OUT.position = mul(model_view_proj, IN.position);
+
+	// EXTREMELY ADVANCED LIGHTING MODEL
+	float normal_z = mul(model_view_it, IN.normal).z;
+	float diffuse = max(normal_z, 0.);
+	float specular = pow(max(normal_z, 0.), shininess);
+
+	float4 mat_color =
+	  float4(diffuse*diffuse_color + specular*specular_color, 0);
+
+	OUT.color = lerp(mix_color, mat_color, mix_factor);
+	OUT.decal_coord = IN.decal_coord;
+
+	return OUT;
+}

@@ -1,0 +1,15 @@
+birdman-mono-digits {
+	size 26
+	source "birdman-mono-digits.png"
+	glyph "0" 33 23 0 15 29 0 0 0 0
+	glyph "6" 32 23 0 15 27 0 0 23 0
+	glyph "9" 32 23 0 15 28 0 0 46 0
+	glyph "8" 31 23 1 15 28 0 0 69 0
+	glyph "2" 29 23 1 15 25 0 0 92 0
+	glyph "5" 29 23 1 15 26 0 33 0 0
+	glyph "4" 28 23 0 15 25 0 33 23 0
+	glyph "7" 28 23 1 15 23 0 33 46 0
+	glyph "3" 27 23 3 15 26 0 33 69 0
+	glyph "1" 12 23 0 15 8 0 0 115 1
+	glyph ":" 11 21 1 13 8 0 33 92 0
+}

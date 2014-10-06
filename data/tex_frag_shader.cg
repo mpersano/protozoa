@@ -1,0 +1,21 @@
+struct out_data {
+	float3 color : COLOR;
+};
+
+struct in_data {
+	float4 color : COLOR;
+	float2 decal_coord : TEXCOORD0;
+};
+
+uniform float4 mix_color;
+uniform float mix_factor;
+
+out_data
+tex_frag_shader_main(in_data IN, uniform sampler2D decal : TEXUNIT0)
+{
+	out_data OUT;
+	float4 d = tex2D(decal, IN.decal_coord);
+	float4 mat_color = d*IN.color;
+	OUT.color = lerp(mix_color, mat_color, mix_factor);
+	return OUT;
+}
